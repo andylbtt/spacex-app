@@ -1,59 +1,97 @@
-/* Estilos globales futuristas */
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #e0e0e0;
-  min-height: 100vh;
-}
-
-/* Navbar futurista */
-nav {
-  background: rgba(20, 20, 20, 0.85);
-  padding: 1rem;
+/* ====== Página principal ====== */
+.home-page {
   display: flex;
-  gap: 1.5rem;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  flex-direction: column;
+  min-height: calc(100vh - 60px); /* resta navbar si existe */
 }
 
-nav a {
-  color: #00ffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 8px #ff00ff;
-}
-
-/* Contenedor principal */
-main {
+/* Hero con imagen de fondo */
+.hero-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://www.spacex.com/static/images/backgrounds/f9_feature.jpg")
+    no-repeat center center/cover;
+  position: relative;
   padding: 2rem;
-  text-align: center;
+  color: white;
 }
 
-/* Títulos */
-h1, h2, h3 {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+/* Overlay oscuro para mejor contraste */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(2px);
 }
 
-/* Botones futuristas */
-button {
-  background: transparent;
-  border: 2px solid #00ffff;
-  padding: 10px 20px;
+/* Contenido centrado */
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  text-align: left;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Título */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
+}
+
+/* Texto */
+.hero-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Botones */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
   border-radius: 8px;
-  color: #00ffff;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background: #00ffff;
+/* Botón principal */
+.btn-primary {
+  background: #00eaff;
+  border: none;
   color: #121212;
-  box-shadow: 0 0 15px #00ffff;
 }
+
+.btn-primary:hover {
+  background: #00c0cc;
+  box-shadow: 0 0 12px #00eaff;
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00eaff;
+  color: #00eaff;
+}
+
+.btn-secondary:hover {
+  background: #00eaff;
+  color: #121212;
+  box-shadow: 0 0 12px #00eaff;
+}
+
