@@ -94,4 +94,47 @@
   color: #121212;
   box-shadow: 0 0 12px #00eaff;
 }
+/* ====== Navbar ====== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 100;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 8px #00eaff, 0 0 15px #ff00ff;
+}
 
