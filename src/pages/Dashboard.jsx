@@ -1,12 +1,20 @@
-import { useAuth } from "../context/AuthContext.jsx";
+import "./Dashboard.css";
 
 export default function Dashboard() {
-  const { user, logout } = useAuth();
   return (
-    <section style={{ padding: 24 }}>
-      <h1>Dashboard</h1>
-      <p>Hola, {user?.email}</p>
-      <button onClick={logout}>Cerrar sesión</button>
-    </section>
+    <main className="dashboard-page">
+      <h1 className="dashboard-title">📊 Dashboard</h1>
+      <p className="dashboard-text">
+        Visualiza estadísticas de lanzamientos de SpaceX.
+      </p>
+
+      <div className="dashboard-cards">
+        <div className="card">Total lanzamientos: 120</div>
+        <div className="card">Éxitos: 110</div>
+        <div className="card">Fallidos: 10</div>
+      </div>
+    </main>
   );
 }
+
+

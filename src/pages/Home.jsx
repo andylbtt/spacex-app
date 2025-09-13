@@ -1,14 +1,15 @@
+import "./Home.css";
 export default function Home() {
-  return    ( 
-  <main className="home-page">
+  return ( 
+    <main className="home-page">
       <div className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">SpaceX Launch Tracker</h1>
+          <h1 className="hero-title">🚀 SpaceX Launch Tracker</h1>
           <p className="hero-text">
             SpaceX es una compañía aeroespacial fundada por Elon Musk con la
             misión de revolucionar el transporte espacial, reducir los costos y
             permitir la colonización de Marte.  
-            <br />  
+            <br /><br />  
             En esta aplicación puedes explorar lanzamientos, conocer detalles de
             las misiones y sentir el futuro de la exploración espacial.
           </p>
@@ -21,3 +22,4 @@ export default function Home() {
     </main>
   );
 }
+

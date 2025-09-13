@@ -1,0 +1,40 @@
+.launches-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.launches-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px cyan;
+  margin-bottom: 20px;
+}
+
+.launches-text {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.launches-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.launch-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid cyan;
+  width: 250px;
+  transition: all 0.3s;
+}
+
+.launch-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}

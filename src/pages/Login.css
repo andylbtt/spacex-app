@@ -1,0 +1,53 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://sxcontent9668.azureedge.us/cms-assets/assets/Launch_DRAGON_CREW_Desktop_b66cf4fe31.jpg") no-repeat center/cover;
+  color: white;
+}
+
+.login-box {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid cyan;
+  width: 320px;
+  text-align: center;
+}
+
+.login-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px cyan;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.login-form button {
+  padding: 12px;
+  font-family: 'Orbitron', sans-serif;
+  background: cyan;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: black;
+  color: cyan;
+  border: 1px solid cyan;
+}
