@@ -19,5 +19,5 @@ export default function useFetchLaunches() {
     })();
   }, []);
 
-  return { data, loading, error };
+  return { data, loading };
 }
