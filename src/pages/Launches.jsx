@@ -1,4 +1,4 @@
-import "./Lauches.css";
+import "./Launches.css";
 
 export default function Launches() {
   return (
