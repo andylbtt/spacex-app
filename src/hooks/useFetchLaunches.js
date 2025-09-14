@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react";
 import { fetchLaunches } from "../services/spaceXService";
 
-export default function useFetchLaunches() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const launches = await fetchLaunches();
-        setData(launches.slice(0, 20));
-      } catch (e) {
-        setError(e.message);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
-
-  return { data, loading };
+import { useState, useEffect } from "react";
+import { fetchLaunches } from "../services/spaceXService";
+const useFetchLaunches = () => {
+const [data, setData] = useState([]);
+const [loading, setLoading] = useState(true);
+useEffect(() => {
+const getLaunches = async () => {
+try {
+const launches = await fetchLaunches();
+setData(launches);
+} catch (error) {
+console.error("Error fetching launches:", error);
+} finally {
+setLoading(false);
 }
+};
+getLaunches();
+}, []);
+return { data, loading };
+
+Unset
+
+Unset
+};
+export default useFetchLaunches;
