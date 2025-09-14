@@ -2,39 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  background: black;
+  padding: 15px 30px;
+  border-bottom: 1px solid cyan;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.4rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
   color: cyan;
-  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  text-shadow: 0 0 10px cyan;
 }
 
 .nav-links {
-  display: flex;
-  gap: 25px;
   list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.nav-links a {
+.nav-links li a {
+  color: white;
+  font-family: "Orbitron", sans-serif;
   text-decoration: none;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  transition: 0.3s;
   padding: 8px 15px;
   border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  color: white;
-  border: 1px solid transparent;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
   background: cyan;
   color: black;
-  box-shadow: 0 0 15px cyan;
-  border: 1px solid cyan;
+  box-shadow: 0 0 10px cyan;
 }
+

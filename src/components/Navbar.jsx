@@ -1,11 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; // Importa el CSS
+import "./Navbar.css";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">🚀 SpaceX Tracker</div>
+      <h1 className="logo">🚀 SpaceX App</h1>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/launches">Launches</Link></li>
@@ -14,6 +13,4 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}
