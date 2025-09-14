@@ -10,14 +10,12 @@ const schema = z.object({
 
 export default function LoginForm() {
   const { login } = useAuth();
-
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: zodResolver(schema),
   });
 
   const onSubmit = (data) => {
-    console.log("Login exitoso:", data);
-    login(); // Marca como autenticado
+    login(data.email); // Guardamos el usuario
   };
 
   return (

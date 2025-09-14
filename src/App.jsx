@@ -12,8 +12,15 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/launches" element={<Launches />} />
         <Route path="/login" element={<Login />} />
+        <Route
+          path="/launches"
+          element={
+            <PrivateRoute>
+              <Launches />
+            </PrivateRoute>
+          }
+        />
         <Route
           path="/dashboard"
           element={
@@ -28,6 +35,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

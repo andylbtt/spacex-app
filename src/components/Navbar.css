@@ -39,3 +39,22 @@
   box-shadow: 0 0 10px cyan;
 }
 
+.logout-btn {
+  background: transparent;
+  color: cyan;
+  border: 1px solid cyan;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: cyan;
+  color: black;
+}
+.user-email {
+  color: lightgray;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
