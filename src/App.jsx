@@ -4,7 +4,7 @@ import Launches from "./pages/Launches";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import PrivateRoute from "./routes/PrivateRoute";
-
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <Routes>
