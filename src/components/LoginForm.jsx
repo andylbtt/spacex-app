@@ -1,34 +1,31 @@
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useAuth } from "../context/AuthContext.jsx";
-
+import * as z from "zod";
 const schema = z.object({
-  email: z.string().email("Correo inválido"),
-  password: z.string().min(6, "Mínimo 6 caracteres"),
+email: z.string().email("Invalid email format"),
+password: z.string().min(6, "Password must be at least 6 characters"),
 });
+const LoginForm = () => {
+const {
+register,
+handleSubmit,
+formState: { errors },
+} = useForm({ resolver: zodResolver(schema) });
+const onSubmit = (data) => {
+console.log("Login Data:", data);
+};
+return (
+<form onSubmit={handleSubmit(onSubmit)}>
+<input type="email" {...register("email")}
+placeholder="Email" />
+<p>{errors.email?.message}</p>
+<input type="password" {...register("password")}
+placeholder="Password" />
 
-export default function LoginForm() {
-  const { login } = useAuth();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm({ resolver: zodResolver(schema) });
-
-  const onSubmit = (data) => {
-    login(data.email);
-  };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)} style={{ display: "grid", gap: 8 }}>
-      <input type="email" placeholder="Email" {...register("email")} />
-      {errors.email && <small>{errors.email.message}</small>}
-
-      <input type="password" placeholder="Password" {...register("password")} />
-      {errors.password && <small>{errors.password.message}</small>}
-
-      <button disabled={isSubmitting} type="submit">Entrar</button>
-    </form>
-  );
-}
+Unset
+<p>{errors.password?.message}</p>
+<button type="submit">Login</button>
+</form>
+);
+};
+export default LoginForm;

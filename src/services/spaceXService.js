@@ -1,5 +1,8 @@
-export async function fetchLaunches() {
-  const res = await fetch("https://api.spacexdata.com/v4/launches");
-  if (!res.ok) throw new Error("Error fetching launches");
-  return await res.json();
+export const fetchLaunches = async () => {
+const response = await
+fetch("https://api.spacexdata.com/v4/launches");
+if (!response.ok) {
+throw new Error("Error fetching data");
 }
+return await response.json();
+};
